@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Preguntas para la charla · Actividades Samuel Digital</title>
+<meta name="description" content="Dejá tu pregunta para la charla Trabajar en la era de la IA.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;700&display=swap">
+<style>
+:root{--noche:#1b1446;--violeta:#5b2a86;--magenta:#e0457b;--naranja:#ff8a3d;--sol:#ffc93c;--fondo:#f5f2fb;--panel:#fff;--tinta:#1f2340;--suave:#5d6285;--borde:#ddd6ee;--ok:#1a7f4b;
+  --marca:"Bungee","Arial Black",system-ui,sans-serif;--texto:"Inter",system-ui,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);color:var(--tinta);font-family:var(--texto);font-size:17px;line-height:1.5}
+.franja{background:linear-gradient(180deg,var(--noche) 0%,var(--violeta) 45%,var(--magenta) 80%,var(--naranja) 100%);padding:28px 16px 0;overflow:hidden}
+.franja-in{max-width:1100px;margin:0 auto;display:flex;align-items:flex-end;gap:22px;flex-wrap:wrap}
+.sol{width:140px;height:70px;flex:none}.sol svg{display:block;width:100%;height:100%}
+.marca{padding-bottom:16px;min-width:0}
+.marca .k{color:#ffe7c2;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.marca h1{margin:4px 0 0;font-family:var(--marca);font-weight:400;font-size:clamp(26px,5vw,44px);line-height:1.05;color:#fff;text-shadow:3px 3px 0 var(--magenta),6px 6px 0 rgba(27,20,70,.6)}
+.piso{height:26px;margin:0 -16px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.35) 0 2px,transparent 2px 46px),linear-gradient(180deg,var(--naranja),#ffb35c)}
+main{max-width:1100px;margin:0 auto;padding:24px 16px 60px}
+.intro,.grupo,.tab{background:var(--panel);border:1px solid var(--borde);border-radius:16px;padding:20px 22px;margin-bottom:22px}
+.intro h2,.tab h2{margin:0 0 8px;font-size:22px}
+.intro ol{margin:8px 0 0;padding-left:22px}
+.grupo label{display:block;font-weight:700;margin-bottom:6px}
+input,textarea{width:100%;font:inherit;font-size:16px;border:1.5px solid var(--borde);border-radius:10px;padding:10px 12px;background:#fff;color:var(--tinta)}
+input:focus,textarea:focus{outline:none;border-color:var(--violeta);box-shadow:0 0 0 3px rgba(91,42,134,.15)}
+.tab .num{display:inline-block;background:var(--noche);color:var(--sol);font-family:var(--marca);font-size:14px;border-radius:8px;padding:3px 10px;margin-bottom:8px}
+.tab figure{margin:10px 0 18px}
+.tab img{width:100%;border-radius:10px;border:1px solid var(--borde);cursor:zoom-in;display:block}
+.tab figcaption{font-size:14px;color:var(--suave);margin-top:6px}
+.q{margin-bottom:14px}
+.q label{display:block;font-weight:700}
+.q .ayuda{display:block;font-size:14px;color:var(--suave);margin-bottom:6px}
+textarea{min-height:80px;resize:vertical}
+.acciones{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+button{font:inherit;font-weight:700;border:none;border-radius:999px;padding:11px 24px;cursor:pointer;background:linear-gradient(90deg,var(--magenta),var(--naranja));color:#fff}
+button:disabled{opacity:.6;cursor:default}
+.estado{font-weight:600;font-size:15px}
+.estado.ok{color:var(--ok)}.estado.err{color:#b3261e}
+.zoom{position:fixed;inset:0;background:rgba(15,10,40,.92);display:none;align-items:center;justify-content:center;padding:16px;z-index:10;cursor:zoom-out}
+.zoom.on{display:flex}.zoom img{max-width:100%;max-height:100%;border-radius:8px}
+footer{text-align:center;color:var(--suave);font-size:14px;padding:10px 16px 30px}
+.charla{background:var(--panel);border:1px solid var(--borde);border-radius:16px;padding:20px 22px;margin-bottom:22px}
+.charla h2{margin:0 0 6px;font-size:24px}.charla .quien{font-weight:700;color:var(--violeta)}
+.datos{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.datos span{background:#efe9fa;border-radius:999px;padding:5px 14px;font-weight:600;font-size:15px}
+.form{background:var(--panel);border:1px solid var(--borde);border-radius:16px;padding:20px 22px}
+.form label{display:block;font-weight:700;margin:0 0 6px}.form .campo{margin-bottom:16px}
+textarea{min-height:120px}
+</style></head>
+<body>
+<header class="franja"><div class="franja-in">
+  <div class="sol" aria-hidden="true"><svg viewBox="0 0 150 75"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe066"/><stop offset="1" stop-color="#ff5e7e"/></linearGradient><mask id="rayas"><rect width="150" height="75" fill="#fff"/><rect y="40" width="150" height="4" fill="#000"/><rect y="50" width="150" height="5" fill="#000"/><rect y="61" width="150" height="6" fill="#000"/></mask></defs><path d="M0 75 A75 75 0 0 1 150 75 Z" fill="url(#g)" mask="url(#rayas)"/></svg></div>
+  <div class="marca"><div class="k">Samuel Digital · ISFT N° 238 · Charla abierta</div><h1>Dejá tu pregunta</h1></div>
+</div><div class="piso"></div></header>
+<main>
+<section class="charla">
+  <h2>Trabajar en la era de la IA</h2>
+  <p>Cómo las empresas están incorporando la inteligencia artificial, y qué habilidades te abren hoy las puertas del mundo laboral.</p>
+  <p><span class="quien">Marcos Avila</span> · Expert Senior Manager en Bain &amp; Company (Londres). Más de 14 años en estrategia, tecnología e IA en América, Europa y Medio Oriente.</p>
+  <div class="datos"><span>Viernes 30/10</span><span>19:00 hs</span><span>Virtual · Google Meet</span></div>
+</section>
+<section class="form">
+  <p style="margin-top:0">Escribí lo que te gustaría preguntarle. Podés mandar todas las preguntas que quieras, de a una.</p>
+  <div class="campo"><label for="nombre">Tu nombre (opcional)</label><input id="nombre" autocomplete="off" placeholder="Si preferís, dejalo vacío"></div>
+  <div class="campo"><label for="preg">Tu pregunta</label><textarea id="preg" placeholder="Por ejemplo: ¿qué habilidades buscan hoy las empresas en alguien que recién empieza?"></textarea></div>
+  <div class="acciones"><button type="button" id="enviar">Enviar pregunta</button><span class="estado" id="estado" role="status"></span></div>
+</section>
+</main>
+<footer>Samuel Digital · actividades.samueldigital.com.ar</footer>
+<script>
+const FORM="https://docs.google.com/forms/d/e/1FAIpQLSfzH9qtl2rIFBhwpkWQW8MJExJbzFEv3VQ-c2nOGNK3atUGCg/formResponse";
+const b=document.getElementById('enviar'),e=document.getElementById('estado'),p=document.getElementById('preg'),n=document.getElementById('nombre');
+b.addEventListener('click',async()=>{
+  const q=p.value.trim(); e.className='estado';
+  if(!q){e.className='estado err';e.textContent='Escribí tu pregunta antes de enviar.';p.focus();return}
+  const fd=new URLSearchParams();fd.append('entry.705278519',n.value.trim());fd.append('entry.1387438756',q);
+  b.disabled=true;e.textContent='Enviando…';
+  try{await fetch(FORM,{method:'POST',mode:'no-cors',body:fd});p.value='';e.className='estado ok';e.textContent='¡Pregunta enviada! Si tenés otra, escribila y enviala.'}
+  catch(err){e.className='estado err';e.textContent='No se pudo enviar. Revisá la conexión y probá de nuevo.'}
+  b.disabled=false;
+});
+</script>
+</body>
+</html>
