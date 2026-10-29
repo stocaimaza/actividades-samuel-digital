@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leer tableros · Actividades Samuel Digital</title>
+<meta name="description" content="Actividad: identificar objetivos, OKR, KPIs y conclusiones en cuatro tableros.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Inter:wght@400;600;700&display=swap">
+<style>
+:root{--noche:#1b1446;--violeta:#5b2a86;--magenta:#e0457b;--naranja:#ff8a3d;--sol:#ffc93c;--fondo:#f5f2fb;--panel:#fff;--tinta:#1f2340;--suave:#5d6285;--borde:#ddd6ee;--ok:#1a7f4b;
+  --marca:"Bungee","Arial Black",system-ui,sans-serif;--texto:"Inter",system-ui,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fondo);color:var(--tinta);font-family:var(--texto);font-size:17px;line-height:1.5}
+.franja{background:linear-gradient(180deg,var(--noche) 0%,var(--violeta) 45%,var(--magenta) 80%,var(--naranja) 100%);padding:28px 16px 0;overflow:hidden}
+.franja-in{max-width:1100px;margin:0 auto;display:flex;align-items:flex-end;gap:22px;flex-wrap:wrap}
+.sol{width:140px;height:70px;flex:none}.sol svg{display:block;width:100%;height:100%}
+.marca{padding-bottom:16px;min-width:0}
+.marca .k{color:#ffe7c2;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.marca h1{margin:4px 0 0;font-family:var(--marca);font-weight:400;font-size:clamp(26px,5vw,44px);line-height:1.05;color:#fff;text-shadow:3px 3px 0 var(--magenta),6px 6px 0 rgba(27,20,70,.6)}
+.piso{height:26px;margin:0 -16px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.35) 0 2px,transparent 2px 46px),linear-gradient(180deg,var(--naranja),#ffb35c)}
+main{max-width:1100px;margin:0 auto;padding:24px 16px 60px}
+.intro,.grupo,.tab{background:var(--panel);border:1px solid var(--borde);border-radius:16px;padding:20px 22px;margin-bottom:22px}
+.intro h2,.tab h2{margin:0 0 8px;font-size:22px}
+.intro ol{margin:8px 0 0;padding-left:22px}
+.grupo label{display:block;font-weight:700;margin-bottom:6px}
+input,textarea{width:100%;font:inherit;font-size:16px;border:1.5px solid var(--borde);border-radius:10px;padding:10px 12px;background:#fff;color:var(--tinta)}
+input:focus,textarea:focus{outline:none;border-color:var(--violeta);box-shadow:0 0 0 3px rgba(91,42,134,.15)}
+.tab .num{display:inline-block;background:var(--noche);color:var(--sol);font-family:var(--marca);font-size:14px;border-radius:8px;padding:3px 10px;margin-bottom:8px}
+.tab figure{margin:10px 0 18px}
+.tab img{width:100%;border-radius:10px;border:1px solid var(--borde);cursor:zoom-in;display:block}
+.tab figcaption{font-size:14px;color:var(--suave);margin-top:6px}
+.q{margin-bottom:14px}
+.q label{display:block;font-weight:700}
+.q .ayuda{display:block;font-size:14px;color:var(--suave);margin-bottom:6px}
+textarea{min-height:80px;resize:vertical}
+.acciones{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+button{font:inherit;font-weight:700;border:none;border-radius:999px;padding:11px 24px;cursor:pointer;background:linear-gradient(90deg,var(--magenta),var(--naranja));color:#fff}
+button:disabled{opacity:.6;cursor:default}
+.estado{font-weight:600;font-size:15px}
+.estado.ok{color:var(--ok)}.estado.err{color:#b3261e}
+.zoom{position:fixed;inset:0;background:rgba(15,10,40,.92);display:none;align-items:center;justify-content:center;padding:16px;z-index:10;cursor:zoom-out}
+.zoom.on{display:flex}.zoom img{max-width:100%;max-height:100%;border-radius:8px}
+footer{text-align:center;color:var(--suave);font-size:14px;padding:10px 16px 30px}
+</style>
+</head>
+<body>
+<header class="franja"><div class="franja-in">
+  <div class="sol" aria-hidden="true"><svg viewBox="0 0 150 75"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe066"/><stop offset="1" stop-color="#ff5e7e"/></linearGradient><mask id="rayas"><rect width="150" height="75" fill="#fff"/><rect y="40" width="150" height="4" fill="#000"/><rect y="50" width="150" height="5" fill="#000"/><rect y="61" width="150" height="6" fill="#000"/></mask></defs><path d="M0 75 A75 75 0 0 1 150 75 Z" fill="url(#g)" mask="url(#rayas)"/></svg></div>
+  <div class="marca"><div class="k">Samuel Digital · Práctica Profesionalizante · ISFT N° 238</div><h1>Leer un tablero</h1></div>
+</div><div class="piso"></div></header>
+
+<main>
+<section class="intro">
+  <h2>La actividad</h2>
+  <p>Van a ver cuatro tableros, cada uno con una historia distinta. No hay que corregirlos ni mejorarlos: la idea es <b>leerlos</b> y descubrir qué hay detrás. Para cada tablero respondan:</p>
+  <ol>
+    <li>¿Quién usa el tablero y qué decisión tiene que tomar?</li>
+    <li>¿Cuál es el objetivo?</li>
+    <li>¿Cuáles son los resultados clave (OKR)?</li>
+    <li>¿Cuáles son los KPIs?</li>
+    <li>¿Qué conclusiones sacan de los datos?</li>
+  </ol>
+  <p>Hagan clic en la imagen para verla más grande. Al terminar cada tablero, toquen <b>Enviar respuestas</b>. Los datos de los tableros son ficticios.</p>
+</section>
+
+<section class="grupo">
+  <label for="grupo">Integrantes del grupo</label>
+  <input id="grupo" placeholder="Apellido y nombre de cada integrante" autocomplete="off">
+</section>
+
+<div id="tableros"></div>
+</main>
+<footer>Samuel Digital · actividades.samueldigital.com.ar</footer>
+<div class="zoom" id="zoom"><img alt=""></div>
+
+<script>
+const FORM="https://docs.google.com/forms/d/e/1FAIpQLSd4gFLvDvrmQffEnCJpZHcvmZO6xrnmVhdl0fV99dogd2fyOw/formResponse";
+const E={grupo:"entry.800762359",tablero:"entry.716674735",q:["entry.1569322367","entry.66592153","entry.299284577","entry.131141429","entry.802818196"]};
+const TABS=[
+ {t:"Turismo en Santa Clara del Mar",img:"tablero1.jpg"},
+ {t:"Alquileres Costa Norte",img:"tablero2.jpg"},
+ {t:"¿Conviene abrir un hotel boutique?",img:"tablero3.jpg"},
+ {t:"Planes MarChi: app para turistas",img:"tablero4.jpg"}];
+const Q=[
+ ["¿Quién usa el tablero y qué decisión tiene que tomar?","Miren el título y el subtítulo: ¿para quién está hecho?"],
+ ["¿Cuál es el objetivo?","Lo que esa persona quiere lograr, dicho en palabras."],
+ ["¿Cuáles son los resultados clave (OKR)?","Cómo se da cuenta de que lo logró. Pista: busquen las metas con números."],
+ ["¿Cuáles son los KPIs?","Los números que la persona mira para saber cómo va."],
+ ["¿Qué conclusiones sacan de los datos?","¿Va cumpliendo sus metas? ¿Qué le recomendarían?"]];
+const store={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+const cont=document.getElementById('tableros');
+TABS.forEach((tb,i)=>{
+  const s=document.createElement('section');s.className='tab';
+  s.innerHTML=`<span class="num">Tablero ${i+1}</span><h2>${tb.t}</h2>
+  <figure><img src="${tb.img}" alt="Tablero ${i+1}: ${tb.t}"><figcaption>Clic para ampliar</figcaption></figure>
+  ${Q.map((q,j)=>`<div class="q"><label for="t${i}q${j}">${j+1}. ${q[0]}</label><span class="ayuda">${q[1]}</span><textarea id="t${i}q${j}"></textarea></div>`).join('')}
+  <div class="acciones"><button type="button">Enviar respuestas del tablero ${i+1}</button><span class="estado" role="status"></span></div>`;
+  cont.appendChild(s);
+  s.querySelectorAll('textarea').forEach(ta=>{ta.value=store.get('lt_'+ta.id)||'';ta.addEventListener('input',()=>store.set('lt_'+ta.id,ta.value))});
+  const btn=s.querySelector('button'),est=s.querySelector('.estado');
+  btn.addEventListener('click',async()=>{
+    const g=document.getElementById('grupo').value.trim();
+    est.className='estado';
+    if(!g){est.className='estado err';est.textContent='Completen los integrantes del grupo (arriba).';document.getElementById('grupo').focus();return}
+    const r=Q.map((_,j)=>document.getElementById(`t${i}q${j}`).value.trim());
+    if(r.every(x=>!x)){est.className='estado err';est.textContent='Respondan al menos una pregunta.';return}
+    const fd=new URLSearchParams();fd.append(E.grupo,g);fd.append(E.tablero,`Tablero ${i+1}: ${tb.t}`);r.forEach((x,j)=>fd.append(E.q[j],x));
+    btn.disabled=true;est.textContent='Enviando…';
+    try{await fetch(FORM,{method:'POST',mode:'no-cors',body:fd});est.className='estado ok';est.textContent='¡Enviado! Si corrigen algo, pueden volver a enviar.'}
+    catch(e){est.className='estado err';est.textContent='No se pudo enviar. Revisen la conexión y prueben de nuevo.'}
+    btn.disabled=false;
+  });
+});
+const gi=document.getElementById('grupo');gi.value=store.get('lt_grupo')||'';gi.addEventListener('input',()=>store.set('lt_grupo',gi.value));
+const z=document.getElementById('zoom');
+document.addEventListener('click',e=>{if(e.target.matches('.tab img')){z.querySelector('img').src=e.target.src;z.classList.add('on')}else if(e.target.closest('#zoom'))z.classList.remove('on')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')z.classList.remove('on')});
+</script>
+</body>
+</html>
